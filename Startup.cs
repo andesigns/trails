@@ -57,6 +57,8 @@ namespace trails
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                
+                routes.MapRoute("spa-routes", "{*anthing}", new { controller = "Home", action = "Index" });
             });
         }
     }
